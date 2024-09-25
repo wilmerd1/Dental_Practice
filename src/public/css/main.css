@@ -1,0 +1,138 @@
+:root {
+    --color-primary: #333;
+    --color-secondary: #f4f4f4;
+    --color-text: #333;
+    --color-text-inverse: #fff;
+    --font-main: Arial, sans-serif;
+    --transition-hover: all 0.3s ease;
+  }
+  
+  /* Reset y estilos base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Open sans", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-text-inverse);
+  }
+  
+  .contenedor_main{
+    padding: 2rem;
+  }
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Componentes */
+  .header {
+    background-color: white;
+    text-align: center;
+    
+  }
+  
+  .parallax{
+      padding: 90px 0;
+      background: #f4f4f4  url("/img/portfolio.jpg") top center;
+    height: 200px 200px;
+    /* Create the parallax scrolling effect */
+    background-position: center 0px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  .header__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .header__title {
+    font-family: Alice, Georgia, serif;
+    font-weight: 400;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .header__subtitle {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .nav {
+    background-color: var(--color-secondary);
+    padding: 1rem 0;
+  }
+  
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  
+  .nav__item {
+    margin: 0 1rem;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+    transition: var(--transition-hover);
+  }
+  
+  .nav__link:hover {
+    color: #3fa3d1;
+  }
+    
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .section__title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+    
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
