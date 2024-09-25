@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:false}));
 // Routes
 
 app.get('/', (req, res) => {
-    res.send('Hello World desde NodeJs con Express \n Andres Duque');
+    res.send('Hello World desde NodeJs con Express Andres Duque');
 });
 
 // Static Files
