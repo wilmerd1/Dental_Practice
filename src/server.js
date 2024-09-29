@@ -37,6 +37,7 @@ app.use(morgan('dev'));
 
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/dental.routes'));
+app.use(require('./routes/patient.routes'));
 
 // Static Files
 

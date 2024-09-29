@@ -12,20 +12,20 @@ const {
 
 
 // New Patient
-router.get('/patients/add', renderPatientForm);
-router.post('/patients/new-patient', createNewPatient);
+router.get('/patient/add', renderPatientForm);
+router.post('/patient/new-patient', createNewPatient);
 
 // Get all Patients
-router.get('/patients', renderPatients);
+router.get('/patient', renderPatients);
 
 
 // Update Patient
-router.get('/patients/edit/:id', renderEditForm);
-router.put('/patients/edit/:id', updatePatient);
+router.get('/patient/edit/:id', renderEditForm);
+router.put('/patient/edit/:id', updatePatient);
 
 
 // Delete Patient
-router.delete('/patients/delete/:id', deletePatient); 
+router.delete('/patient/delete/:id', deletePatient); 
 
 module.exports = router;
 

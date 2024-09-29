@@ -4,11 +4,14 @@ const Patient = require('../models/Patient');
 
 
 patientsController.renderPatientForm = (req, res) => {
-    res.render('patients/new-patient');
+    res.render('patient/new-patient');
 };
 
 
 patientsController.createNewPatient = (req, res) => {
+    const {tipoPaciente, nombre, apellidos, tipoIdentificacion, numeroIdentificacion, fechaNacimiento,sexo, email, direccion, pais, estadoCivil, observaciones} = req.body;
+    const newPatient = new Patient({tipoPaciente, nombre, apellidos, tipoIdentificacion, numeroIdentificacion, fechaNacimiento,sexo, email, direccion, pais, estadoCivil, observaciones});
+    console.log(newPatient);
     res.send('create');
 };
 
