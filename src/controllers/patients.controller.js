@@ -8,21 +8,22 @@ patientsController.renderPatientForm = (req, res) => {
 };
 
 
-patientsController.createNewPatient = (req, res) => {
-    const {tipoPaciente, nombre, apellidos, tipoIdentificacion, numeroIdentificacion, fechaNacimiento,sexo, email, direccion, pais, estadoCivil, observaciones} = req.body;
-    const newPatient = new Patient({tipoPaciente, nombre, apellidos, tipoIdentificacion, numeroIdentificacion, fechaNacimiento,sexo, email, direccion, pais, estadoCivil, observaciones});
-    console.log(newPatient);
-    res.send('create');
+patientsController.createNewPatient = async (req, res) => {
+    const {nombre, apellidos, numeroIdentificacion, email, direccion, pais, observaciones} = req.body;
+    const newPatient = new Patient({nombre, apellidos, numeroIdentificacion, email, direccion, pais, observaciones});
+    await newPatient.save();
+    res.redirect('/patients');
 };
 
 
-patientsController.renderPatients = (req, res) => {
-    res.send('patients');
+patientsController.renderPatients = async(req, res) => {
+    const patients = await Patient.find().lean();
+    res.render('patient/all-patients', {patients});
 };
 
 
 patientsController.renderEditForm = (req, res) => {
-    res.send('edit');
+    res.render('patient/edit-patient')
 };
 
 
@@ -32,8 +33,10 @@ patientsController.updatePatient = (req, res) => {
 
 
 
-patientsController.deletePatient = (req, res) => {
-    res.send('delete');
+patientsController.deletePatient = async(req, res) => {
+    await Patient.findByIdAndDelete(req.params.id);
+    res.redirect('/patients');
+    
 };
 
 module.exports = patientsController;

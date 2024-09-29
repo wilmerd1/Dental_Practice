@@ -7,7 +7,6 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "build": "tailwindcss -i ./src/input.css -o ./src/public/css/output.css --watch"
-
   },
   "keywords": [],
   "author": "",

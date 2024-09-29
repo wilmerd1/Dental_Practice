@@ -16,7 +16,7 @@ router.get('/patient/add', renderPatientForm);
 router.post('/patient/new-patient', createNewPatient);
 
 // Get all Patients
-router.get('/patient', renderPatients);
+router.get('/patients/', renderPatients);
 
 
 // Update Patient

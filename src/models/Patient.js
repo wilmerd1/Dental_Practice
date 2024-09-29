@@ -1,11 +1,11 @@
 const { Schema, model} = require ('mongoose')
 
 const PatientsSchema = new Schema({
-    tipoPaciente: {
+   /*  tipoPaciente: {
       type: String,
       enum: ['Primera vez', 'Retorno'], // agregar más opciones si es necesario
       required: true
-    },
+    }, */
     nombre: {
       type: String,
       required: true
@@ -14,25 +14,25 @@ const PatientsSchema = new Schema({
       type: String,
       required: true
     },
-    tipoIdentificacion: {
+    /* tipoIdentificacion: {
       type: String,
       enum: ['Cédula de Ciudadanía', 'Pasaporte', 'Cedula de Extranjería', 'Otro'], // agregar más opciones si es necesario
       required: true
-    },
+    }, */
     numeroIdentificacion: {
       type: String,
       required: true
     },
-    fechaNacimiento: {
+    /* fechaNacimiento: {
       type: Date,
       required: true
-    },
-    sexo: {
+    }, */
+   /*  sexo: {
       type: String,
       enum: ['Masculino', 'Femenino', 'Otro'],
       required: true 
   
-    },
+    }, */
     email: {
       type: String,
       required: true
@@ -45,11 +45,11 @@ const PatientsSchema = new Schema({
       type: String,
       required: true
     },
-    estadoCivil:{
+    /* estadoCivil:{
         type: String,
         enum: ['Soltero', 'Casado', 'Divorciado', 'Viudo', 'Otro'],
         required: true
-    },
+    }, */
     observaciones: {
       type: String
     },
