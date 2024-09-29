@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Paciente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <form id="patientForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Registro de Paciente</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo">
+                        Tipo *
+                    </label>
+                    <select id="tipo" name="tipo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>PACIENTE PRIMERA VEZ</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
+                        Nombre *
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nombre" name="nombre" type="text" placeholder="Wilmer Andres">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="apellidos">
+                        Apellidos *
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="apellidos" name="apellidos" type="text" placeholder="Duque Olaya">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipoIdentificacion">
+                        Tipo de identificación *
+                    </label>
+                    <select id="tipoIdentificacion" name="tipoIdentificacion" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Cédula De Ciudadanía</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="numeroIdentificacion">
+                        Número de identificación *
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="numeroIdentificacion" name="numeroIdentificacion" type="text" placeholder="1012365551">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="fechaNacimiento">
+                        Fecha de nacimiento *
+                    </label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="04" name="diaNacimiento">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="06" name="mesNacimiento">
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="1990" name="anioNacimiento">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="genero">
+                        Género *
+                    </label>
+                    <select id="genero" name="genero" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="ocupacion">
+                        Ocupación
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="ocupacion" name="ocupacion" type="text" placeholder="Desarrolladores y analistas de software">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="grupoSanguineo">
+                        Grupo Sanguíneo
+                    </label>
+                    <select id="grupoSanguineo" name="grupoSanguineo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>O+</option>
+                        <option>A+</option>
+                        <option>B+</option>
+                        <option>AB+</option>
+                        <option>O-</option>
+                        <option>A-</option>
+                        <option>B-</option>
+                        <option>AB-</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="estadoCivil">
+                        Estado Civil
+                    </label>
+                    <select id="estadoCivil" name="estadoCivil" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Soltero</option>
+                        <option>Casado</option>
+                        <option>Divorciado</option>
+                        <option>Viudo</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nivelEducativo">
+                        Nivel educativo
+                    </label>
+                    <select id="nivelEducativo" name="nivelEducativo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Profesional</option>
+                        <option>Técnico</option>
+                        <option>Bachiller</option>
+                        <option>Primaria</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email *
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="ntkwilmer@gmail.com">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
+                        Dirección
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="direccion" name="direccion" type="text" placeholder="CL 162 55 69 T2 A1107">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="ciudad">
+                        Ciudad, municipio o localidad
+                    </label>
+                    <select id="ciudad" name="ciudad" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Suba (11-011)</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="telefonoFijo">
+                        Teléfono fijo
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telefonoFijo" name="telefonoFijo" type="tel" placeholder="3142534881">
+                </div>
+                
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="telefonoMovil">
+                        Teléfono móvil
+                    </label>
+                    <div class="flex">
+                        <select class="shadow appearance-none border rounded-l w-1/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option>🇨🇴 +57</option>
+                        </select>
+                        <input class="shadow appearance-none border rounded-r w-3/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telefonoMovil" name="telefonoMovil" type="tel" placeholder="3142534881">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Registrar Paciente
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('patientForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const patientData = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch('/api/patients', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(patientData),
+                });
+
+                if (response.ok) {
+                    console.log('Paciente registrado exitosamente');
+                    // Aquí puedes agregar código para manejar una respuesta exitosa
+                } else {
+                    console.error('Error al registrar el paciente');
+                    // Aquí puedes agregar código para manejar errores
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                // Aquí puedes agregar código para manejar errores de red
+            }
+        });
+    </script>
+</body>
+</html>

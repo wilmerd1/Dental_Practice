@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars'); // motor de plantillas
 const path = require('path');
+const morgan = require('morgan');
 
 
 
@@ -24,6 +25,7 @@ app.set('view engine', 'hbs');
 // Middlewares -- funciones que se van ejecutando
 
 app.use(express.urlencoded({extended:false}));
+app.use(morgan('dev'));
 
 
 
