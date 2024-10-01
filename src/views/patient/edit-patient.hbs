@@ -1,0 +1,86 @@
+<div class="container mx-auto p-6">
+<form id="patientForm" action="/patient/edit/{{patient._id}}?_method=PUT" method="POST"
+    class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <input type="hidden" name="_method" value="PUT">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800">Actualización Datos Basicos del Paciente</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
+                Nombre *
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="nombre" name="nombre" type="text" placeholder="Nombres" value="{{patient.nombre}}">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="apellidos">
+                Apellidos *
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="apellidos" name="apellidos" type="text" placeholder="Apellidos" value="{{patient.apellidos}}" >
+        </div>
+
+
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="numeroIdentificacion">
+                Número de identificación *
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="numeroIdentificacion" name="numeroIdentificacion" type="text"
+                placeholder="Número de Identificación" value="{{patient.numeroIdentificacion}}">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                Email *
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="email" name="email" type="email" placeholder="Email" value="{{patient.email}}">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
+                Dirección
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="direccion" name="direccion" type="text" placeholder="Dirección" value="{{patient.direccion}}">
+        </div>
+
+
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="pais">
+                Pais
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="pais" name="pais" type="tel" placeholder="pais" value="{{patient.pais}}">
+        </div>
+
+        <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="observaciones">
+                observaciones
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="observaciones" name="observaciones" type="tel" placeholder="Observaciones" value="{{patient.observaciones}}">
+        </div>
+    </div>
+
+    <div class="mt-6">
+        <button
+            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">
+            Guardar
+        </button>
+    </div>
+</form>
+</div>

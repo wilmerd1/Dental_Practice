@@ -1,0 +1,38 @@
+
+  <nav class="container mx-auto px-6 py-3">
+    <div class="flex items-center justify-between">
+      <div class="text-white font-bold text-xl">
+        <a href="/">Dental Manager Cloud</a>
+      </div>
+      <div class="hidden md:block">
+        <ul class="flex items-center space-x-8">
+          {{#if user}}
+          <li><a href="/" class="text-white">Inicio</a></li>
+          <li><a href="/users/logout" class="text-white">Logout</a></li>
+          {{else}}
+          <li><a href="/users/signin" class="text-white">Login</a></li>
+          <li><a href="/users/signup" class="text-white">Register</a></li>
+          {{/if}}
+        </ul>
+      </div>
+      <div class="md:hidden">
+        <button class="outline-none mobile-menu-button">
+          <svg class="w-6 h-6 text-white" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu hidden md:hidden">
+      <ul class="mt-4 space-y-4">
+        {{#if user}}
+        <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Inicio</a></li>
+        <li><a href="/users/logout" class="block px-4 py-2 text-white bg-gray-900 rounded">Logout</a></li>
+        {{else}}
+        <li><a href="/users/signin" class="block px-4 py-2 text-white bg-gray-900 rounded">Login</a></li>
+        <li><a href="/users/signup" class="block px-4 py-2 text-white bg-gray-900 rounded">Register</a></li>
+        {{/if}}
+      </ul>
+    </div>
+    
+  </nav>
