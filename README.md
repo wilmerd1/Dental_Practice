@@ -1,6 +1,7 @@
 # Dental_Practice
  
-Puebas Hellow World
+Puebas Hello World
+
 ![alt text](image.png)
 
 
@@ -49,7 +50,7 @@ Se envían recordatorios de citas a los pacientes.
 
 
 
-##### Diseño de la Estructura de Datos (Ejemplo rapido de como definirla https://chatgpt.com/share/66ecc2cf-4748-8008-90c1-17cc33713db2)
+##### Diseño de la Estructura de Datos
 
 ##### Configuración del Entorno
 
