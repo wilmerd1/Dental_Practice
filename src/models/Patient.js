@@ -62,15 +62,14 @@ const PatientsSchema = new Schema({
     timestamps: true
   }
 
-   /*  // ... otros campos básicos del paciente
+   /* 
     direccion: String,
     telefono: String,
     correo: String,
     estadoCivil: String,
     ocupacion: String,
     eps: String,
-    // ... otros campos adicionales
-   
+  
     observaciones: String */
   );
   module.exports = model('Patient', PatientsSchema);
