@@ -53,6 +53,14 @@ const PatientsSchema = new Schema({
     observaciones: {
       type: String
     },
+    user: {
+      type: String,
+      required: true
+    }
+  },
+  {
+    timestamps: true
+  }
 
    /*  // ... otros campos básicos del paciente
     direccion: String,
@@ -64,5 +72,5 @@ const PatientsSchema = new Schema({
     // ... otros campos adicionales
    
     observaciones: String */
-  });
+  );
   module.exports = model('Patient', PatientsSchema);

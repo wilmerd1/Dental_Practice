@@ -2,14 +2,17 @@
   <nav class="container mx-auto px-6 py-3">
     <div class="flex items-center justify-between">
       <div class="text-white font-bold text-xl">
-        <a href="#">Logo</a>
+        <a href="/">Dental Manager Cloud</a>
       </div>
       <div class="hidden md:block">
         <ul class="flex items-center space-x-8">
-          <li><a href="#" class="text-white">Inicio</a></li>
-          <li><a href="#" class="text-white">About</a></li>
-          <li><a href="#" class="text-white">Services</a></li>
-          <li><a href="/about" class="text-white">Contact</a></li>
+          {{#if user}}
+          <li><a href="/" class="text-white">Inicio</a></li>
+          <li><a href="/users/logout" class="text-white">Logout</a></li>
+          {{else}}
+          <li><a href="/users/signin" class="text-white">Login</a></li>
+          <li><a href="/users/signup" class="text-white">Register</a></li>
+          {{/if}}
         </ul>
       </div>
       <div class="md:hidden">
@@ -22,10 +25,13 @@
     </div>
     <div class="mobile-menu hidden md:hidden">
       <ul class="mt-4 space-y-4">
-        <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
-        <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">About</a></li>
-        <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Services</a></li>
-        <li><a href="/about" class="block px-4 py-2 text-white bg-gray-900 rounded">Contact</a></li>
+        {{#if user}}
+        <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Inicio</a></li>
+        <li><a href="/users/logout" class="block px-4 py-2 text-white bg-gray-900 rounded">Logout</a></li>
+        {{else}}
+        <li><a href="/users/signin" class="block px-4 py-2 text-white bg-gray-900 rounded">Login</a></li>
+        <li><a href="/users/signup" class="block px-4 py-2 text-white bg-gray-900 rounded">Register</a></li>
+        {{/if}}
       </ul>
     </div>
     
