@@ -1,2 +1,6 @@
 .vercel
-* .env
+.vscode
+.env
+node_modules
+package-lock
+

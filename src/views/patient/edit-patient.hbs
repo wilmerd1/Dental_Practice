@@ -8,41 +8,46 @@
 
         <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
-                Nombre *
+                Nombre
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="nombre" name="nombre" type="text" placeholder="Nombres" value="{{patient.nombre}}">
+                id="nombre" name="nombre" type="text" placeholder="Nombres" value="{{patient.nombre}}" required="" maxlength="50"
+                    oninvalid="this.setCustomValidity('Por favor ingresa un nombre')" oninput="setCustomValidity('')">
         </div>
 
         <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="apellidos">
-                Apellidos *
+                Apellidos
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="apellidos" name="apellidos" type="text" placeholder="Apellidos" value="{{patient.apellidos}}" >
+                id="apellidos" name="apellidos" type="text" placeholder="Apellidos" value="{{patient.apellidos}}" required="" maxlength="50"
+                    oninvalid="this.setCustomValidity('Por favor ingresa un apellido')" oninput="setCustomValidity('')">
         </div>
 
 
 
         <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="numeroIdentificacion">
-                Número de identificación *
+                Número de identificación
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="numeroIdentificacion" name="numeroIdentificacion" type="text"
-                placeholder="Número de Identificación" value="{{patient.numeroIdentificacion}}">
+                placeholder="Número de Identificación" value="{{patient.numeroIdentificacion}}" required="" maxlength="20"
+                    oninvalid="this.setCustomValidity('Por favor ingresa un Ingresar un numero de identificación')"
+                    oninput="setCustomValidity('')">
         </div>
 
         <div>
             <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                Email *
+                Email
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email" name="email" type="email" placeholder="Email" value="{{patient.email}}">
+                id="email" name="email" type="email" placeholder="Email" value="{{patient.email}}" required="" maxlength="30"
+                    oninvalid="this.setCustomValidity('Por favor ingresa un Email')" oninput="setCustomValidity('')">
         </div>
 
         <div>
@@ -51,7 +56,9 @@
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="direccion" name="direccion" type="text" placeholder="Dirección" value="{{patient.direccion}}">
+                id="direccion" name="direccion" type="text" placeholder="Dirección" value="{{patient.direccion}}" required="" maxlength="60"
+                    oninvalid="this.setCustomValidity('Por favor ingresa una dirección')"
+                    oninput="setCustomValidity('')">
         </div>
 
 
@@ -62,7 +69,8 @@
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="pais" name="pais" type="tel" placeholder="pais" value="{{patient.pais}}">
+                id="pais" name="pais" type="tel" placeholder="pais" value="{{patient.pais}}" required="" maxlength="30"
+                    oninvalid="this.setCustomValidity('Por favor ingresa un Pais')" oninput="setCustomValidity('')">
         </div>
 
         <div>
@@ -71,7 +79,7 @@
             </label>
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="observaciones" name="observaciones" type="tel" placeholder="Observaciones" value="{{patient.observaciones}}">
+                id="observaciones" name="observaciones" type="tel" placeholder="Observaciones" value="{{patient.observaciones}}" maxlength="50">
         </div>
     </div>
 
